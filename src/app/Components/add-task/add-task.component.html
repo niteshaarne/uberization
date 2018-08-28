@@ -1,0 +1,22 @@
+
+
+<div class="addTaskDivClass">
+    <p>Add Task</p>
+<form [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)" class="addTaskFormClass">
+	<TABLE >
+		<TR>
+			<TD>Title</TD>
+			<TD>
+				<INPUT TYPE="TEXT" name="titles" formControlName="titles" ngDefaultControl />
+			</TD>
+		</TR>
+		<TR>
+			<TD>Description</TD>
+			<TD><textarea TYPE="TEXT" name="description" formControlName="description" ngDefaultControl ></textarea></TD>
+		</TR>
+	</TABLE>
+	<P>
+      <input type="submit" [disabled] = "!formdata.valid"  class="forsubmit" value="Add task">
+	</P>
+</form>
+</div>

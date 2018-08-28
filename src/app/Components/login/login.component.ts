@@ -9,13 +9,12 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  title = 'Uberization Login';
+  title = '';
   emailid;
   formdata;
   constructor(private router: Router) { }
   ngOnInit() {
-     //this.todaydate = this.myservice.showTodayDate();
-     this.formdata = new FormGroup({
+      this.formdata = new FormGroup({
         emailid: new FormControl("", Validators.required),
         passwd: new FormControl("", Validators.required)
      });

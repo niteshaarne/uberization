@@ -8,6 +8,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { RouterModule} from '@angular/router';
 import { ROUTES } from './app.route';
 import { AdminDashboardComponent } from './Components/admin-dashboard/admin-dashboard.component';
+import { AddTaskComponent } from './Components/add-task/add-task.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AdminDashboardComponent } from './Components/admin-dashboard/admin-dash
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,

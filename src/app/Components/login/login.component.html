@@ -1,17 +1,22 @@
 <div class="loginDivClass">
   <form [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)" class="loginFormClass">
-     <input type="text" class="fortextbox" name="emailid" placeholder="emailid" 
-        formControlName="emailid">
-     <br/>
+      <div class="form-group">
+        <label for="emailid">Username</label> 
+        <input type="email" class="fortextbox" name="emailid" placeholder="Enter email" 
+            formControlName="emailid">
+      </div>
+     <!-- <br/> -->
+     <div class="form-group">
+        <label for="passwd">Password</label>
+        <input type="password" class="fortextbox" name="passwd" 
+            placeholder="Password" formControlName="passwd">
+    </div>
+     <!-- <br/><br/> -->
      
-     <input type="password" class="fortextbox" name="passwd" 
-        placeholder="passwd" formControlName="passwd">
-     <br/>
-     
-     <input type="submit" [disabled] = "!formdata.valid"  class="forsubmit" value="Log In">
+     <input type="submit" [disabled] = "!formdata.valid"  class="btn btn-primary" value="Login">
   </form>
 </div>
 
 <!--<p>
   Email entered is : {{emailid}}
-</p>-->
+</p>--> 
