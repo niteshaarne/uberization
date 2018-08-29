@@ -11,6 +11,7 @@ import { AdminDashboardComponent } from './Components/admin-dashboard/admin-dash
 import { AddTaskComponent } from './Components/add-task/add-task.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
+import { RegistrationComponent } from './Components/registration/registration.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     LoginComponent,
     AdminDashboardComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
