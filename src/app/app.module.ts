@@ -9,6 +9,7 @@ import { RouterModule} from '@angular/router';
 import { ROUTES } from './app.route';
 import { AdminDashboardComponent } from './Components/admin-dashboard/admin-dashboard.component';
 import { AddTaskComponent } from './Components/add-task/add-task.component';
+import { RegistrationComponent } from './Components/registration/registration.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AddTaskComponent } from './Components/add-task/add-task.component';
     FooterComponent,
     LoginComponent,
     AdminDashboardComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
