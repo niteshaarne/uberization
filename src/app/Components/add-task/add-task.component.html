@@ -1,22 +1,48 @@
 
 
-<div class="addTaskDivClass">
-    <p>Add Task</p>
-<form [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)" class="addTaskFormClass">
+<div align="center">
+<form [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)" class="addTaskClass">
 	<TABLE class="table">
 		<TR>
-			<TD>Title</TD>
+			<TD><label for="exampleInputtypeOfWork">Type of work</label></TD>
 			<TD>
-				<INPUT TYPE="TEXT" name="titles" formControlName="titles" ngDefaultControl />
+				<select formControlName="typeOfWork" name="typeOfWork" id="exampleInputtypeOfWork">
+					<option value="caseProcessing">Case processing</option>
+					<option value="medicalReviews">Medical review</option>
+				</select>
 			</TD>
 		</TR>
 		<TR>
-			<TD>Description</TD>
-			<TD><textarea TYPE="TEXT" name="description" formControlName="description" ngDefaultControl ></textarea></TD>
+			<TD><label for="exampleInputnumberOfCases">Number of cases</label></TD>
+			<TD> <input type="number" name="numberOfCases" class="form-control-alt" id="exampleInputnumberOfCases" placeholder="Number of cases" size="45" formControlName="numberOfCases" >
+			</TD>
+		</TR>
+		<TR>
+			<TD><label for="exampleInputDeadline">Date of work</label></TD>
+			<TD><div class="input-group date">
+					<input  formControlName="dateOfWork" type="text" maxlength="14" placeholder="MM/DD/YYYY" data-input-mask-type="date" class="form-control horizon-date-picker horizon-input-mask" data-provide="horizon-date-picker" data-horizon-date-picker-start-date="0d" />
+					<span class="input-group-addon">
+							<i class="fa fa-calendar"></i>
+					</span>
+				</div>
+				
+				
+				<!-- <input type="text" name="dateOfWork" formControlName="dateOfWork" ngDefaultControl class="form-control-alt" id="exampleInputdateOfWork" placeholder="Date of work" size="45"> -->
+			</TD>
+		</TR>
+
+		<TR>
+			<TD><label for="exampleInputDeadline">Response Deadline</label></TD>
+			<TD><input type="number" name="responseDeadline" formControlName="responseDeadline" ngDefaultControl class="form-control-alt" id="exampleInputDeadline" placeholder="Response Deadline" size="45">
+			</TD>
 		</TR>
 	</TABLE>
 	<P>
-      <input type="submit" [disabled] = "!formdata.valid"  class="forsubmit" value="Add task">
+      <input type="submit" [disabled] = "!formdata.valid" class="btn btn-primary"  value="Add task">
 	</P>
 </form>
 </div>
+
+
+
+

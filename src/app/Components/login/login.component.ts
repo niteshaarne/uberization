@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
 
   title = '';
   emailid;
+  passwd;
   formdata;
   constructor(private router: Router) { }
   ngOnInit() {
@@ -22,7 +23,7 @@ export class LoginComponent implements OnInit {
   onClickSubmit(data) {
     console.log(data);
     this.emailid = data.emailid;
-    this.emailid = data.passwd;
+    this.passwd = data.passwd;
     this.router.navigate(['/adminDashboard'])
     
   }

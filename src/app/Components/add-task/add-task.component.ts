@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {Router} from '@angular/router';
+import { formControlBinding } from '@angular/forms/src/directives/reactive_directives/form_control_directive';
 
 @Component({
   selector: 'app-add-task',
@@ -8,22 +9,28 @@ import {Router} from '@angular/router';
   styleUrls: ['./add-task.component.css']
 })
 export class AddTaskComponent implements OnInit {
-  titles;
-  description;
+  typeOfWork;
+  numberOfCases;
+  dateOfWork;
+  responseDeadline;
   formdata;
   constructor(private router: Router) { }
 
   ngOnInit() {
      this.formdata = new FormGroup({
-      titles: new FormControl("", Validators.required),
-      description: new FormControl("", Validators.required)
+      typeOfWork: new FormControl("", Validators.required),
+      numberOfCases: new FormControl("", Validators.required),
+      dateOfWork : new FormControl("", Validators.required),
+      responseDeadline : new FormControl("", Validators.required)
    });
   }
 
   onClickSubmit(data) {
     console.log(data);
-    this.titles = data.titles;
-    this.description = data.description;
+    this.typeOfWork = data.typeOfWork;
+    this.numberOfCases = data.numberOfCases;
+    this.dateOfWork = data.dateOfWork;
+    this.responseDeadline = data.responseDeadline;
     this.router.navigate(['/adminDashboard'])
     
   }
