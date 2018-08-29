@@ -9,6 +9,8 @@ import { RouterModule} from '@angular/router';
 import { ROUTES } from './app.route';
 import { AdminDashboardComponent } from './Components/admin-dashboard/admin-dashboard.component';
 import { AddTaskComponent } from './Components/add-task/add-task.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import { AddTaskComponent } from './Components/add-task/add-task.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    HttpClientInMemoryWebApiModule,
+    HttpClientModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [],
